@@ -90,3 +90,43 @@ Registro de restrição funcional ou incapacidade e seu status.
 | 2 | [1..N] | Restrição funcional ou incapacidade | – | Cada item representa uma restrição/incapacidade. |
 | 3 | [1..1] | Código da restrição/incapacidade | Texto codificado | Conceito estruturado de limitação funcional. |
 | 3 | [1..1] | Status da restrição/incapacidade | Texto codificado | Ativo; Inativo; Indeterminado. |
+
+## XI – Procedimentos realizados
+Registro dos procedimentos realizados ou solicitados, com problema/diagnóstico associado, código do procedimento, status e informações temporais.
+
+| Nível | Ocorrência | Seção/Item | Tipo de Dados | Conceito/Observações |
+|---|---|---|---|---|
+| 1 | [1..1] | Procedimentos realizados ou solicitados | – | Bloco obrigatório. |
+| 2 | [1..N] | Procedimento | – | Cada item representa um procedimento individual (realizado ou solicitado). |
+| 3 | [0..1] | Problema/diagnóstico relacionado | Texto codificado | Código do problema ao qual o procedimento está relacionado. |
+| 3 | [1..1] | Terminologia que descreve o procedimento | Texto codificado | OID das terminologias SIGTAP, CBHPM, TUSS ou outra terminologia adotada. |
+| 3 | [1..1] | Código do procedimento | Texto codificado | Código do procedimento na terminologia informada. |
+| 3 | [1..1] | Status do procedimento | Texto codificado | Planejado; Em andamento; Não realizado; Suspenso; Cancelado; Completado; Desconhecido; Entrada com erro. |
+
+## XII – Evolução clínica (resumo)
+Descrição resumida da evolução clínica durante a internação.
+
+| Nível | Ocorrência | Seção/Item | Tipo de Dados | Conceito/Observações |
+|---|---|---|---|---|
+| 1 | [1..1] | Resumo da evolução clínica | – | Bloco narrativo estruturado. |
+| 2 | [1..1] | Descrição da evolução clínica | Texto livre | Descrição narrativa integrada da evolução clínica, principais eventos, resposta terapêutica, complicações e manejo clínico. |
+
+## XIII – Alergias e/ou reações adversas
+Informação sobre alergias e reações adversas relevantes durante a internação.
+
+| Nível | Ocorrência | Seção/Item | Tipo de Dados | Conceito/Observações |
+|---|---|---|---|---|
+| 1 | [0..N] | Alergias e/ou reações adversas na internação | – | Bloco opcional, porém recomendado quando houver alergias/reação relevante. |
+| 2 | [0..N] | Alergia e/ou reação adversa | – | Cada item representa uma alergia ou reação adversa. |
+| 3 | [1..1] | Categoria do agente causador | Texto codificado | Alimento; Medicamento; Fator Externo/Ambiental; Biológico; Outro. |
+| 3 | [1..1] | Agente/substância específica | Texto codificado | Identificação estruturada do agente. |
+| 3 | [0..1] | Severidade clínica | Texto codificado | Leve; Moderada; Grave. |
+
+## XIV – Prescrição de medicamentos na alta
+Prescrições de medicamentos na alta, em forma estruturada e/ou não estruturada.
+
+| Nível | Ocorrência | Seção/Item | Tipo de Dados | Conceito/Observações |
+|---|---|---|---|---|
+| 1 | [1..1] | Prescrição da alta | – | Bloco obrigatório. |
+| 2 | [0..1] | Medicamentos prescritos na alta (não estruturado) | – | Para cenários de transição. |
+| 3 | [1..1] | Descrição da prescrição | Texto livre | Texto contendo um ou mais medicamentos, doses e orientações.
