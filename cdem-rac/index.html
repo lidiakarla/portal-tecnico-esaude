@@ -1,0 +1,2338 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica para implementação e homologação (CDEM-RAC e RISAH).">
+      
+      
+      
+      
+        <link rel="prev" href="../base-normativa/">
+      
+      
+        <link rel="next" href="../risah/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>CDEM-RAC (Ambulatorial) - Portal Técnico e-saúdeSP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelo-informacional-do-conjunto-de-dados-expandido-municipal-cdem-rac" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Portal Técnico e-saúdeSP" class="md-header__button md-logo" aria-label="Portal Técnico e-saúdeSP" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portal Técnico e-saúdeSP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CDEM-RAC (Ambulatorial)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../comece-por-aqui/" class="md-tabs__link">
+          
+  
+  
+  Guia de Introdução
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Modelos de Informação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../especificacao/" class="md-tabs__link">
+          
+  
+  
+  Desenvolvimento Técnico
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../homologacao/" class="md-tabs__link">
+          
+  
+  
+  Governança e Apoio
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Portal Técnico e-saúdeSP" class="md-nav__button md-logo" aria-label="Portal Técnico e-saúdeSP" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Portal Técnico e-saúdeSP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Introdução
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guia de Introdução
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comece-por-aqui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comece por aqui
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-normativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base Normativa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de Informação
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modelos de Informação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDEM-RAC (Ambulatorial)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDEM-RAC (Ambulatorial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-identificacao-do-prontuario-no-sistema-de-origem-quando-disponivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I – Identificação do prontuário no sistema de origem, quando disponível
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-identificacao-do-registro-no-sistema-de-origem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        II – Identificação do registro no sistema de origem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-cnes-do-estabelecimento-de-saude-onde-ocorreu-o-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        III – CNES do estabelecimento de saúde onde ocorreu o atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-identificacao-do-profissional-responsavel-pelo-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IV – Identificação do profissional responsável pelo atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-identificacao-do-individuo-atendido-cpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V – Identificação do indivíduo atendido (CPF)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-data-e-hora-de-inicio-e-de-termino-do-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VI – Data e hora de início e de término do atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-tipo-de-atendimento-presencial-ou-por-telessaude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VII – Tipo de atendimento (presencial ou por telessaúde)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-informacoes-clinicas-definidas-na-estrategia-e-sus-aps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VIII – Informações clínicas definidas na Estratégia e-SUS APS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ix-motivo-do-atendimento-cid-ou-ciap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IX – Motivo do atendimento (CID ou CIAP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x-problemas-ou-diagnosticos-avaliados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X – Problemas ou diagnósticos avaliados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xi-alergias-e-reacoes-adversas-quando-houver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XI – Alergias e reações adversas (quando houver)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xii-procedimentos-realizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XII – Procedimentos realizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xiii-encaminhamentos-e-procedimentos-solicitados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XIII – Encaminhamentos e procedimentos solicitados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xiv-prescricao-de-medicamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XIV – Prescrição de medicamentos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xv-fornecimento-de-medicamentos-durante-o-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XV – Fornecimento de medicamentos durante o atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xvi-atestados-medicos-ou-odontologicos-quando-aplicavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XVI – Atestados médicos ou odontológicos (quando aplicável)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xvii-resultados-de-testes-diagnosticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XVII – Resultados de testes diagnósticos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xviii-recomendacoes-de-conduta-seguimento-instrucoes-e-plano-de-cuidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XVIII – Recomendações de conduta, seguimento, instruções e plano de cuidado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xix-outras-informacoes-complementares-relevantes-para-continuidade-do-cuidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XIX – Outras informações complementares relevantes para continuidade do cuidado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xx-assinatura-eletronica-do-profissional-responsavel-pelo-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XX – Assinatura eletrônica do profissional responsável pelo atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risah/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RISAH (Hospitalar)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvimento Técnico
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolvimento Técnico
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../especificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação FHIR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integracao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Integração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sandbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sandbox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governança e Apoio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Governança e Apoio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../homologacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homologação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Downloads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suporte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suporte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-identificacao-do-prontuario-no-sistema-de-origem-quando-disponivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I – Identificação do prontuário no sistema de origem, quando disponível
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-identificacao-do-registro-no-sistema-de-origem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        II – Identificação do registro no sistema de origem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-cnes-do-estabelecimento-de-saude-onde-ocorreu-o-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        III – CNES do estabelecimento de saúde onde ocorreu o atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-identificacao-do-profissional-responsavel-pelo-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IV – Identificação do profissional responsável pelo atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-identificacao-do-individuo-atendido-cpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V – Identificação do indivíduo atendido (CPF)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-data-e-hora-de-inicio-e-de-termino-do-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VI – Data e hora de início e de término do atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-tipo-de-atendimento-presencial-ou-por-telessaude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VII – Tipo de atendimento (presencial ou por telessaúde)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-informacoes-clinicas-definidas-na-estrategia-e-sus-aps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VIII – Informações clínicas definidas na Estratégia e-SUS APS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ix-motivo-do-atendimento-cid-ou-ciap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IX – Motivo do atendimento (CID ou CIAP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x-problemas-ou-diagnosticos-avaliados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X – Problemas ou diagnósticos avaliados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xi-alergias-e-reacoes-adversas-quando-houver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XI – Alergias e reações adversas (quando houver)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xii-procedimentos-realizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XII – Procedimentos realizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xiii-encaminhamentos-e-procedimentos-solicitados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XIII – Encaminhamentos e procedimentos solicitados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xiv-prescricao-de-medicamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XIV – Prescrição de medicamentos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xv-fornecimento-de-medicamentos-durante-o-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XV – Fornecimento de medicamentos durante o atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xvi-atestados-medicos-ou-odontologicos-quando-aplicavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XVI – Atestados médicos ou odontológicos (quando aplicável)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xvii-resultados-de-testes-diagnosticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XVII – Resultados de testes diagnósticos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xviii-recomendacoes-de-conduta-seguimento-instrucoes-e-plano-de-cuidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XVIII – Recomendações de conduta, seguimento, instruções e plano de cuidado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xix-outras-informacoes-complementares-relevantes-para-continuidade-do-cuidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XIX – Outras informações complementares relevantes para continuidade do cuidado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xx-assinatura-eletronica-do-profissional-responsavel-pelo-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XX – Assinatura eletrônica do profissional responsável pelo atendimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modelo-informacional-do-conjunto-de-dados-expandido-municipal-cdem-rac">Modelo Informacional do Conjunto de Dados Expandido Municipal (CDEM-RAC)</h1>
+<p>Este documento define o Modelo Informacional do Conjunto de Dados Expandido Municipal, composto por CMD e RAC, incluindo campos, cardinalidades/ocorrências, conceito/observações, regras de preenchimento e validação.</p>
+<h2 id="i-identificacao-do-prontuario-no-sistema-de-origem-quando-disponivel">I – Identificação do prontuário no sistema de origem, quando disponível</h2>
+<p>Identificador local do prontuário/episódio de atendimento no sistema do estabelecimento de saúde, com rastreabilidade ao sistema de origem.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..1]</td>
+<td>Identificação do prontuário no sistema de origem</td>
+<td>Identificador estruturado (system | value)</td>
+<td>Identificador único do prontuário no sistema de origem. Deve ser imutável após a criação. Ex.: system = URI institucional do sistema (p.ex. https://<domínio>/ehr) e value = ID do prontuário/episódio.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Sistema de origem</td>
+<td>Código estruturado</td>
+<td>Código/identificador padronizado do sistema de origem, pertencente a um catálogo municipal de sistemas. Usado para rastreabilidade e auditoria.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Versão do prontuário no sistema de origem</td>
+<td>Texto codificado</td>
+<td>Versão/ordinal do prontuário no sistema de origem, quando houver versionamento local (ex.: v1, v2).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ii-identificacao-do-registro-no-sistema-de-origem">II – Identificação do registro no sistema de origem</h2>
+<p>Identificador local do próprio registro RAC no sistema de origem (registro de atendimento), permitindo auditoria e deduplicação.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..1]</td>
+<td>Identificação do registro no sistema de origem : número do episódio, passagem, encontro</td>
+<td>Identificador estruturado (system | value)</td>
+<td>Identificador único do registro RAC no sistema de origem. Ex.: system = URI institucional do sistema e value = ID do registro.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Data e hora de criação do registro no sistema de origem</td>
+<td>Data e hora (ISO 8601)</td>
+<td>Momento de criação do registro no sistema de origem, quando disponível.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Versão do registro no sistema de origem</td>
+<td>Texto codificado</td>
+<td>Versão/ordinal do registro no sistema de origem, quando houver controle de versionamento local (ex.: v1, v2).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iii-cnes-do-estabelecimento-de-saude-onde-ocorreu-o-atendimento">III – CNES do estabelecimento de saúde onde ocorreu o atendimento</h2>
+<p>Identificação do estabelecimento de saúde responsável pelo atendimento.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..1]</td>
+<td>Estabelecimento de saúde do atendimento</td>
+<td>–</td>
+<td>Bloco obrigatório de identificação do estabelecimento de saúde onde ocorreu o atendimento (inclui telessaúde).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Identificador do estabelecimento de saúde</td>
+<td>Identificador estruturado (system | value)</td>
+<td>CNES do estabelecimento. system deve ser o namespace oficial do CNES e value o código CNES.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Nome do estabelecimento de saúde</td>
+<td>Texto livre</td>
+<td>Nome do estabelecimento, conforme cadastro no CNES (para exibição).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Tipo de estabelecimento</td>
+<td>Texto codificado (CNES)</td>
+<td>Tipologia do estabelecimento conforme CNES (opcional para exibição e análise).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iv-identificacao-do-profissional-responsavel-pelo-atendimento">IV – Identificação do profissional responsável pelo atendimento</h2>
+<p>Identificação do(s) profissional(is) envolvido(s) no atendimento, incluindo aquele que assume responsabilidade clínica.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..1]</td>
+<td>Profissionais do atendimento</td>
+<td>–</td>
+<td>Bloco de identificação do(s) profissional(is) do atendimento. Deve haver pelo menos um profissional marcado como responsável.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..N]</td>
+<td>Profissional</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>[0..1]</td>
+<td>Nome do profissional</td>
+<td>Texto livre</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1..1]</td>
+<td>Número do conselho do profissional atendente</td>
+<td>Caracteres numéricos</td>
+<td>Indica o número do conselho do profissional atendente.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1..1]</td>
+<td>Conselho do profissional atendente</td>
+<td>Texto Codificado</td>
+<td>Indica a entidade de conselho (CRM, CRF, CRO,...).</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1..1]</td>
+<td>UF do conselho do profissional atendente</td>
+<td>Texto Codificado</td>
+<td>Indica a UF do Conselho do Profissional atendente.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Identificador do profissional atendente</td>
+<td>Caracteres numéricos</td>
+<td>Identificação unívoca do profissional atendente.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1..1]</td>
+<td>Ocupação do profissional</td>
+<td>Texto codificado</td>
+<td>Atividade desempenhada pelo profissional que realizou o atendimento.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1..1]</td>
+<td>É o responsável pelo atendimento?</td>
+<td>Texto codificado:</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>[0..N]</td>
+<td>Especialidade do profissional</td>
+<td>Texto codificado (CBOS/CBO)</td>
+<td>Especialidade/área de atuação do profissional.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="v-identificacao-do-individuo-atendido-cpf">V – Identificação do indivíduo atendido (CPF)</h2>
+<p>Identificação da pessoa atendida, obrigatoriamente por CPF, com bloco demográfico complementar para vinculação quando necessário.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..1]</td>
+<td>Identificação do indivíduo</td>
+<td>Seção</td>
+<td>RN01: O documento deve trazer um identificador nacional do indíviduo. Se não houver (CPF/CNS), é obrigatório o bloco de dados demográficos.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Identificador Nacional do Indivíduo - CPF</td>
+<td>Caracteres numéricos</td>
+<td>Identificação unívoca dos usuários: CPF</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Identificador Nacional do Indivíduo - CNS</td>
+<td>Caracteres numéricos</td>
+<td>Identificação unívoca dos usuários: CNS</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Identificação por dados demográficos</td>
+<td>-</td>
+<td>RN03: Usados como parâmetros de pesquisa para a identificação do indivíduo.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Nome completo</td>
+<td>Alfanumérico</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[0..1]</td>
+<td>Nome social</td>
+<td>Alfanumérico</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Nome completo da mãe</td>
+<td>Alfanumérico</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Data de nascimento</td>
+<td>Data</td>
+<td>Conforme ISO 8601.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Sexo</td>
+<td>Texto codificado</td>
+<td>Masculino; Feminino; Ignorado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vi-data-e-hora-de-inicio-e-de-termino-do-atendimento">VI – Data e hora de início e de término do atendimento</h2>
+<p>Registro temporal do atendimento, contendo início e término (quando disponível).</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..1]</td>
+<td>Data e hora do atendimento</td>
+<td>–</td>
+<td>Bloco temporal do atendimento. A data/hora deve estar em conformidade com ISO 8601 e conter fuso/offset quando possível.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Data e hora de início do atendimento</td>
+<td>Data e hora (ISO 8601)</td>
+<td>Data e hora da aceitação do indivíduo para início do atendimento.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Data e hora de término do atendimento</td>
+<td>Data e hora (ISO 8601)</td>
+<td>Data e hora de encerramento do atendimento.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vii-tipo-de-atendimento-presencial-ou-por-telessaude">VII – Tipo de atendimento (presencial ou por telessaúde)</h2>
+<p>Identifica se o atendimento ocorreu presencialmente ou por telessaúde.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..1]</td>
+<td>Tipo de atendimento</td>
+<td>Texto codificado</td>
+<td>Classificação do tipo de atendimento: presencial ou telessaúde.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Modalidade de telessaúde</td>
+<td>Texto codificado</td>
+<td>Indicar a modalidade (ex.: síncrono por vídeo, síncrono por áudio, assíncrono).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="viii-informacoes-clinicas-definidas-na-estrategia-e-sus-aps">VIII – Informações clínicas definidas na Estratégia e-SUS APS</h2>
+<p>Conjunto de informações clínicas estruturadas (medições/aferições, uso de substâncias, etc).</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0..1]</td>
+<td>Observações</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Sinais vitais</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>[0..1]</td>
+<td>Pressão Arterial</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1..1]</td>
+<td>Sistólica</td>
+<td>Caracteres numéricos</td>
+<td>Quantidade indicada de 0 a 1000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1..1]</td>
+<td>Diastólica</td>
+<td>Caracteres numéricos</td>
+<td>Quantidade indicada de 0 a 1000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Medições</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>[0..1]</td>
+<td>Peso</td>
+<td>Caracteres numéricos</td>
+<td>Quantidade indicada de 0 a 1000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[0..1]</td>
+<td>Altura</td>
+<td>Caracteres numéricos</td>
+<td>Quantidade indicada de 0 a 1000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ix-motivo-do-atendimento-cid-ou-ciap">IX – Motivo do atendimento (CID ou CIAP)</h2>
+<p>Motivo principal do atendimento, codificado em CID ou CIAP.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0..1]</td>
+<td>Motivo do atendimento estruturado</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Terminologia que descreve o motivo</td>
+<td>Texto codificado</td>
+<td>CID ; CIAP</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Código do motivo do atendimento</td>
+<td>Texto codificado</td>
+<td>cid-9; cid-10; cid-11; ciap-1; Ciap-2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Declaração subjetiva do indivíduo</td>
+<td>Texto livre</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="x-problemas-ou-diagnosticos-avaliados">X – Problemas ou diagnósticos avaliados</h2>
+<p>Conjunto de problemas/diagnósticos avaliados durante o atendimento.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..N]</td>
+<td>Problemas / diagnósticos avaliados</td>
+<td></td>
+<td>Informações sobre a condição de saúde, lesão, deficiência.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Código do diagnóstico/Problema</td>
+<td>Texto codificado</td>
+<td>Código do diagnóstico/Problema detectado (ex: Z47; M52.3)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Estado de resolução do problema</td>
+<td>Texto codificado</td>
+<td>Ativo, Recorrente, Recidiva, Inativo, Remissão, Resolvido</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xi-alergias-e-reacoes-adversas-quando-houver">XI – Alergias e reações adversas (quando houver)</h2>
+<p>Registro de alergias e/ou reações adversas, com caracterização mínima.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..N]</td>
+<td>Alergia e/ou reação adversa</td>
+<td></td>
+<td>Obrigatório informar ausência de alergia ou 'desconhece alergia'.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Categoria do agente causador</td>
+<td>Texto codificado:</td>
+<td>Alimento, Medicação, Fator Externo/Ambiental, Biológico.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Agente/substância específica</td>
+<td>Texto Codificado</td>
+<td>CBARA, CATMAT, Lista vacinas PNI.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Criticidade</td>
+<td>Texto codificado:</td>
+<td>Alta, Baixa, Indeterminada.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xii-procedimentos-realizados">XII – Procedimentos realizados</h2>
+<p>Registro de procedimentos realizados no atendimento, com código de terminologia e status/resultados associados quando aplicável.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0..N]</td>
+<td>Procedimento(s) realizado(s) ou solicitado(s)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Terminologia que descreve o procedimento</td>
+<td>Texto codificado</td>
+<td>SIGTAP, CBHPM ou TUSS.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Nome do procedimento</td>
+<td>Texto codificado</td>
+<td>Ação de saúde realizada no indivíduo (numero TUSS, ex.).</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Status do procedimento</td>
+<td>Texto codificado:</td>
+<td>Pré-procedimento; Em andamento; Não realizado; Realizado; Suspenso; Cancelado; Completado; Desconhecido; Entrada com erro.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xiii-encaminhamentos-e-procedimentos-solicitados">XIII – Encaminhamentos e procedimentos solicitados</h2>
+<p>Encaminhamentos e procedimentos solicitados no contexto da regulação assistencial, em conformidade com o MIRA vigente.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0..N]</td>
+<td>Encaminhamento/procedimento solicitado</td>
+<td>–</td>
+<td>Registro de encaminhamento e/ou procedimento solicitado, com rastreabilidade ao MIRA.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Código do procedimento/encaminhamento</td>
+<td>Texto codificado</td>
+<td>Código conforme terminologia oficial vigente (ex.: SIGTAP) e/ou catálogo MIRA.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Identificador do pedido no MIRA</td>
+<td>Identificador estruturado</td>
+<td>Identificador do registro de solicitação no MIRA (quando houver).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xiv-prescricao-de-medicamentos">XIV – Prescrição de medicamentos</h2>
+<p>Prescrição de medicamentos no atendimento, estruturada conforme o modelo REPM vigente.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0...1]</td>
+<td>Prescrição no atendimento</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Medicamentos prescritos no atendimento (não estruturado)</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Descrição da prescrição</td>
+<td>Texto livre</td>
+<td>Descrição da prescrição de forma livre, podendo ter vários medicamentos no mesmo texto.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[0..1]</td>
+<td>Medicamentos prescritos no atendimento (estruturado)</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[1..1]</td>
+<td>Terminologia que descreve o medicamento</td>
+<td>Texto codificado</td>
+<td>Code System CS BRTerminologiaMedicamentos.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1..N]</td>
+<td>Medicamento</td>
+<td>Texto codificado</td>
+<td>Indica o nome do princípio ativo, concentração, unidade de medida e forma farmacêutica.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>[1..1]</td>
+<td>Via de administração</td>
+<td>Texto codificado</td>
+<td>Code System - Via de administração.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xv-fornecimento-de-medicamentos-durante-o-atendimento">XV – Fornecimento de medicamentos durante o atendimento</h2>
+<p>Registro de fornecimento/dispensação de medicamentos durante o atendimento, quando aplicável.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0..N]</td>
+<td>Fornecimento/dispensação de medicamento</td>
+<td>–</td>
+<td>Registro em conformidade com o REDFM vigente.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Medicamento fornecido</td>
+<td>Texto codificado</td>
+<td>Identificação do medicamento fornecido (p.ex. DCB/ANVISA, OBS).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Quantidade fornecida</td>
+<td>Número</td>
+<td>Quantidade fornecida/dispensada no atendimento.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xvi-atestados-medicos-ou-odontologicos-quando-aplicavel">XVI – Atestados médicos ou odontológicos (quando aplicável)</h2>
+<p>Atestados emitidos no contexto do atendimento, conforme modelo vigente.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0..N]</td>
+<td>Atestado Médico/Odontológico</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Identificação do indivíduo</td>
+<td></td>
+<td>Identificador do indivíduo que recebe o Atestado.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Data do inicio do Afastamento</td>
+<td>Texto codificado Iso 8601</td>
+<td>Data de inicio do afastamento das atividades.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Tempo de afastamento (dias)</td>
+<td>Caracteres numéricos</td>
+<td>Número de dias que o paciente deve permanecer afastado.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xvii-resultados-de-testes-diagnosticos">XVII – Resultados de testes diagnósticos</h2>
+<p>Resultados de testes diagnósticos realizados no contexto do atendimento, conforme o modelo vigente.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0..N]</td>
+<td>Resultado de teste diagnóstico</td>
+<td>–</td>
+<td>Registro de resultado de teste diagnóstico (teste rápido ou laboratório remoto).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Identificador do teste/exame</td>
+<td>Identificador estruturado</td>
+<td>Identificador do exame/teste no sistema de origem.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Código do teste/exame (LOINC)</td>
+<td>Texto codificado</td>
+<td>Código preferencialmente em LOINC.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Resultado</td>
+<td>Valor</td>
+<td>Resultado do teste (quantitativo com unidade, qualitativo codificado ou texto).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xviii-recomendacoes-de-conduta-seguimento-instrucoes-e-plano-de-cuidado">XVIII – Recomendações de conduta, seguimento, instruções e plano de cuidado</h2>
+<p>Recomendações de conduta e plano de cuidado fornecidos ao indivíduo, preferencialmente codificados em terminologias oficiais.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0..1]</td>
+<td>Plano de cuidados, instruções e recomendações</td>
+<td>–</td>
+<td>Bloco de recomendações na conclusão do atendimento.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Descrição do plano de cuidados</td>
+<td>Texto livre</td>
+<td>Descrição do plano de cuidados, instruções e recomendações.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xix-outras-informacoes-complementares-relevantes-para-continuidade-do-cuidado">XIX – Outras informações complementares relevantes para continuidade do cuidado</h2>
+<p>Informações complementares que auxiliem a continuidade do cuidado e a coordenação da atenção.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[0..1]</td>
+<td>Outras informações complementares</td>
+<td>Texto livre</td>
+<td>Campo para informações adicionais relevantes não contempladas nos demais incisos (ex.: contexto social, barreiras de acesso).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xx-assinatura-eletronica-do-profissional-responsavel-pelo-atendimento">XX – Assinatura eletrônica do profissional responsável pelo atendimento</h2>
+<p>Assinatura eletrônica do profissional responsável, para garantir autoria, integridade e não repúdio.</p>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Ocorrência</th>
+<th>Seção/Item</th>
+<th>Tipo de Dados</th>
+<th>Conceito/Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[1..1]</td>
+<td>Assinatura eletrônica</td>
+<td>–</td>
+<td>Bloco de assinatura eletrônica do profissional responsável.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Identificador do profissional assinante</td>
+<td>Identificador estruturado</td>
+<td>Referência ao profissional responsável.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[1..1]</td>
+<td>Assinatura (artefato criptográfico)</td>
+<td>String/Base64 ou JWS</td>
+<td>Assinatura eletr</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
