@@ -42,7 +42,8 @@ O Sandbox está configurado para aceitar os cenários descritos nos manuais téc
 * **Cenário 1 (CDEM-RAC):** Registro de atendimento ambulatorial com identificação do profissional (CBO) e procedimento realizado.
 * **Cenário 2 (RISAH):** Fluxo de internação hospitalar, incluindo entrada, permanência e alta.
 
-### Checklist de "Smoke Tests" (Validação Inicial):
+### Checklist de "Smoke Tests" (Validação Inicial)
+
 Antes de solicitar a homologação, valide se o seu sistema executa com sucesso:
 
 - [ ] **Autenticação:** Obtenção do Token JWT via OAuth2.
