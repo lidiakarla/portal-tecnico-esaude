@@ -4,16 +4,20 @@ site_description: Documentação técnica para implementação e homologação (
 theme:
   name: material
   language: pt-BR
-  logo: logo.png
-  favicon: logo.png
+  logo: logo.png      
+  favicon: logo.png   
   palette:
-    primary: indigo
-    accent: blue
+    # ALTERE AS DUAS LINHAS ABAIXO 👇
+    primary: teal
+    accent: teal
   features:
     - navigation.tabs
     - navigation.sections
     - search.suggest
     - search.highlight
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Início: index.md
