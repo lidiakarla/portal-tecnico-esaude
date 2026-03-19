@@ -3,3 +3,8 @@ site_description: Documentação técnica para implementação e homologação n
 theme:
   name: material
   language: pt-BR
+
+nav:
+  - Início: index.md
+  - CDEM-RAC: cdem-rac.md
+  - RISAH: risah.md
