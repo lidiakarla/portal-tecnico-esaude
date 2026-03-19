@@ -4,6 +4,8 @@ site_description: Documentação técnica para implementação e homologação (
 theme:
   name: material
   language: pt-BR
+  logo: logo.png
+  favicon: logo.png
   palette:
     primary: indigo
     accent: blue
