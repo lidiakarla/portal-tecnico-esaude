@@ -15,6 +15,7 @@ O objetivo desta etapa é garantir a interoperabilidade técnica e a qualidade m
 
 ## Evidências Exigidas (Mínimo)
 Para a homologação, o fornecedor deve apresentar:
+
 * Payloads (JSON) enviados e recebidos (incluindo OperationOutcome em falhas).
 * Logs com correlation/request-id, timestamps e identificação do ambiente.
 * Relatório de execução de testes (casos, resultados, evidências vinculadas).
