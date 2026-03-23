@@ -30,6 +30,7 @@ Todas as alterações relevantes neste portal técnico e nas especificações de
 
 ### Como ler este Changelog?
 As alterações são categorizadas da seguinte forma:
+
 * **Adicionado:** Para novos recursos ou páginas.
 * **Alterado:** Para mudanças em recursos existentes.
 * **Corrigido:** Para correções de bugs ou erros de documentação.
