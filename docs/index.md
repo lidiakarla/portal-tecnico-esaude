@@ -7,7 +7,7 @@ Bem-vindo ao canal oficial de integração da Secretaria Municipal da Saúde de 
 Estamos em um período de evolução tecnológica para o padrão internacional **HL7 FHIR R4**. É fundamental observar os prazos de conformidade:
 
 * **Modelo Vigente (Temporário):** Atualmente, o repositório permanece receptivo para os envios nos formatos **RAC** e **CMD**.
-* **Novo Padrão Obrigatório:** A partir de **[INSERIR DATA XPTO]**, todos os dados assistenciais deverão ser transmitidos exclusivamente nos novos modelos:
+* **Novo Padrão Obrigatório:** A partir de **[INSERIR DATA]**, todos os dados assistenciais deverão ser transmitidos exclusivamente nos novos modelos:
     * **CDEM-RAC:** Conjunto de Dados Expandido Municipal (Ambulatorial).
     * **RISAH:** Registro de Internação e Saúde Associada à Hospitalização (Hospitalar).
 
