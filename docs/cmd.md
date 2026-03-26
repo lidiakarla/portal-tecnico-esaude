@@ -30,6 +30,6 @@ Nesta seção, você encontra a documentação técnica dos conectores REST-API 
 | **SGHx** | 1.4 | [Download PDF](CMD/documentacao_carga_integrada_sghx.pdf) |
 | **PR** | 1.4 | [Download PDF](CMD/documentacao_carga_integrada_pr.pdf) |
 
-!!! info "Suporte e Integração"
+
     
-    Para iniciar o processo de integração ou obter credenciais, entre em contato com a [equipe de suporte](suporte.md).
+> Para iniciar o processo de integração ou obter credenciais, entre em contato com a [equipe de suporte](suporte.md).
